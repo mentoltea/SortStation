@@ -180,13 +180,11 @@ queue< Token > sort( vector< Token > tks) {
 }
 Token enumerate(std::queue< Token > tks) {
     std::stack<Token> st;
-    std::cout << "in" << std::endl;
     Token tk, temp1, temp2, temp3;
     float a, b, c;
     std::string strtemp;
     for (; !tks.empty(); tks.pop()) {
         tk = tks.front();
-        if (!st.empty()) std::cout << st.top().data + st.top().operand + st.top().uncountable_data << std::endl;
         if (tk.type == OPERAND) {
             st.push(tk);
             continue;
