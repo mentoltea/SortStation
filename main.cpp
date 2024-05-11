@@ -2,10 +2,11 @@
 
 using namespace MySortStation;
 using namespace std;
-int main() {
+int main(int argc, char** argv) {
+    if (argc<2) return 0;
+    string q = argv[1];
+    
     initialize();
-
-    string q = "1 + 1/(2+1) - (3*3)/(1.5*1.5)";
     cout << q << endl;
     auto tk = tokenize(q);
 
