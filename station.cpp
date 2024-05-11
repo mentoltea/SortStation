@@ -212,8 +212,8 @@ Token enumerate(std::queue< Token > tks) {
                 }
 
                 if (temp2.counttype == UNCOUNTABLE) {
-                    if (!strtemp.empty()) strtemp += "/";
-                    strtemp += "(";
+                    if (strtemp.empty()) strtemp += "1";
+                    strtemp += "/(";
 
                     if (temp2.operand == "*") {
                         read_float(&a, temp2);
